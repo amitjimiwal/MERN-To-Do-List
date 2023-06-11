@@ -44,7 +44,7 @@ exports.deletetask = async (req, res) => {
   try {
       const { id } = req.params;
       const reqtask = await task.findById(id);
-      await reqtask.remove()
+      await reqtask.deleteOne()
       res.status(200).json({
             success: true,
             message: "Deleted task",
