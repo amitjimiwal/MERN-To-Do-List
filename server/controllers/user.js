@@ -64,7 +64,7 @@ exports.getmyprofile = (req, res) => {
 
 exports.logout =(req,res)=>{
       res.cookie("token", null, {
-            maxAge:Date.now()
+            maxAge:0
       }
       ).json({
             success:true,
