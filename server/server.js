@@ -2,7 +2,6 @@ const express=require('express')
 const bodyParser=require('body-parser')
 const connectdatabase=require('./models/database')
 const app=express()
-const port=4000;
 const cors=require('cors')
 const dotenv = require("dotenv");
 dotenv.config({ path: "./config.env" });
@@ -14,7 +13,7 @@ app.use(cors())
 app.use(cookieParser())
 app.use(bodyParser.urlencoded({extended:false}))
 app.use("/api/v1",router)
-app.listen(port,()=>{
-      console.log(`Server started on port ${port}`)
+app.listen(process.env.PORT,()=>{
+      console.log(`Server started on port ${process.env.PORT}`)
 })
 

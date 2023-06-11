@@ -20,6 +20,8 @@ const userSchema = new mongoose.Schema({
             required:true,
       }
     });
-// creating user collection that contains above user document
+
+    
+    // creating user collection that contains above user document
 const Users = mongoose.model("Users",userSchema)   
 module.exports=Users
