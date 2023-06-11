@@ -1,5 +1,5 @@
-# Redux-To-Do-List
-To list using Redux and redux toolkit.
+# MERN-To-Do-List
+To list using MERN Stack and redux toolkit.
 
 ## Get Started
 Follow the steps below to get started with the repository:
