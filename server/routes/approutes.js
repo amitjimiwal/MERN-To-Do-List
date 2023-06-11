@@ -14,8 +14,9 @@ router.route('/me').get(isAuthenticated,getmyprofile)
 router.route('/task/new').post(isAuthenticated,newTask)
 // get a users task
 router.route('/task/gettask').get(isAuthenticated,getmyTask)
-router.route('/task/delete').post(isAuthenticated,deletetask)
-router.route('/task/update').post(isAuthenticated,updatetask)
+
+
+router.route('/task/:id').delete(isAuthenticated,deletetask).put(isAuthenticated,updatetask)
 
 
 
