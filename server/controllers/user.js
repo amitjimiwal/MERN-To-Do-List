@@ -5,6 +5,8 @@ const Users = require("../models/User");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const sendCookie = require("../middlewares/sendCookie");
+
+
 exports.registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -64,7 +66,9 @@ exports.getmyprofile = (req, res) => {
 
 exports.logout =(req,res)=>{
       res.cookie("token", null, {
-            maxAge:0
+            maxAge:0,
+            sameSite: process.env.NODE_ENV==="DEV"? "lax":"none",
+            secure: process.env.NODE_ENV==="DEV"? false:true,
       }
       ).json({
             success:true,
