@@ -2,9 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 const TotalCompleteItems = () => {
-  const totalCompleteItems = useSelector((state) => state.todolist).filter(
-    (item) => item.completed === true
-  ).length;
+  const totalCompleteItems =0
   return <h4 className="mt-3">Total Complete Items: {totalCompleteItems}</h4>;
 };
 

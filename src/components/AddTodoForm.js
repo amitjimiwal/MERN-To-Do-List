@@ -1,20 +1,7 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { addItem } from '../store/todoSlice';
 const AddTodoForm = () => {
       const [value,setValue]=useState('');
-	const dispatch=useDispatch();
 	const onSubmit=(e)=>{
-          e.preventDefault();
-	    if(value){
-		dispatch(addItem({
-			title:value,
-		}))
-		return;
-		alert("Task added");
-	    }
-      alert("Enter some Work");
-
 	}
 
 
@@ -23,6 +10,7 @@ const AddTodoForm = () => {
 			<label className='sr-only'>Name</label>
 			<input
 				type='text'
+				name="title"
 				className='form-control mb-2 mr-sm-2'
 				placeholder='Add todo...'
 				value={value}

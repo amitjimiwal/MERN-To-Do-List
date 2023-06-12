@@ -3,22 +3,17 @@ import { useDispatch } from 'react-redux';
 import { completeItem, deleteItem } from '../store/todoSlice';
 
 const TodoItem = ({ id, title, completed }) => {
-	const dispatch=useDispatch();
 	const handleComplete=(compid)=>{
-		dispatch(completeItem({
-			id,completed:!completed
-		}))
+
 	}
       const deleteWork=(delid)=>{
-         dispatch(deleteItem({
-		deleteid:delid
-	   }))
+
 	}
 	return (
 		<li className={`list-group-item ${completed && 'list-group-item-success'}`}>
 			<div className='d-flex justify-content-between'>
 				<span className='d-flex align-items-center'>
-					<input type='checkbox' className='mr-3' checked={completed}onClick={()=>{
+					<input type='checkbox' className='mr-3' checked={completed} onClick={()=>{
 						handleComplete(id)
 					}}></input>
 					{title}
