@@ -1,21 +1,47 @@
-# Redux-To-Do-List
-To list using Redux and redux toolkit.
+# MERN-To-Do-List
+To list using MERN Stack and redux toolkit.
 
-<!-- ## Get started
-To get started, follow the steps below:
+## Get Started
+Follow the steps below to get started with the repository:
 
-1. Clone the repository to your local system by running the following command in your terminal:
-2. git clone https://github.com/amitjimiwal/Redux-To-Do-List.git
-3. Navigate to the root directory of the project using the terminal: cd Redux-To-Do-List
-4. Install the project dependencies using either Yarn or npm:
-  yarn
-or
-  npm install
-5. Once the dependencies have finished installing, start the development server using the following command:
-  yarn start
-or
-  npm start
-6. If everything has been set up correctly, the application should now be running in your browser at http://localhost:3000/. -->
+1. Clone the repository to your local machine:
+
+```console
+git clone [repository_url]
+```
+
+2. Navigate to the directory of interest:
+
+```console
+cd [directory_name]
+```
+
+3. Install the project dependencies using npm:
+```console
+ npm install
+```
+
+4. Start the server by running the appropriate script defined in the package.json file:
+
+```console
+ cd server
+ npm install
+ npm start
+ npm run dev
+```
+ This command will execute the server startup script, which could be defined as node server.js, nodemon server.js, or any other script specified in the package.json file.
+
+5. Once the server is running successfully, you can access it athe specified port.
+
+```
+Note: Make sure the required environment variables are properly set for your development or production environment 
+in server/config.env file 
+```
+
+6. Now you're all set to explore the repository and its functionality. Feel free to modify and customize the code to suit your needs.
+
+8. Please make sure to update the sections with the appropriate details for your repository.
+
 
 ## Contributing
 
