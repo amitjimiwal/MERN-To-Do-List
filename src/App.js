@@ -1,18 +1,11 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import AddTodoForm from './components/AddTodoForm';
-import TodoList from './components/TodoList';
-import TotalCompleteItems from './components/TotalCompleteItems';
-
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./pages/Home";
+import Todo from "./pages/Todo";
+import './App.css'
 const App = () => {
-	return (
-		<div className='container bg-white p-4 mt-5'>
-			<h1>My Todo List</h1>
-			<AddTodoForm />
-			<TodoList />
-			<TotalCompleteItems />
-		</div>
-	);
+  const [isloggedin, setIsLoggedIn] = useState(false);
+  return <div className="w-100 vh-100">{isloggedin ? <Todo /> : <Home />}</div>;
 };
 
 export default App;
