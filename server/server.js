@@ -18,6 +18,6 @@ app.use(cookieParser())
 app.use(bodyParser.urlencoded({extended:false}))
 app.use("/api/v1",router)
 app.listen(process.env.PORT,()=>{
-      console.log(`Server started on port ${process.env.PORT}`)
+      console.log(`Server is started on port ${process.env.PORT}`)
 })
 
