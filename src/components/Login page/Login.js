@@ -1,6 +1,8 @@
 import { useRef } from 'react';
 import { useFormik } from 'formik';
 import LoadingBar from 'react-top-loading-bar'
+import { toast } from 'react-hot-toast';
+import axios from 'axios';
 
 const Login = ({toggle}) => {
       const ref=useRef(null)
@@ -10,16 +12,25 @@ const Login = ({toggle}) => {
               password: '',
             },
             onSubmit:async (values) => {
-                  ref.current.continuousStart();
+              console.log(JSON.stringify(values))
+              ref.current.continuousStart();
+              ref.current.complete()
+              const {data}=await axios.post('http://localhost:4000/api/v1/login',JSON.stringify(values),{
+                headers:{
+                  "Content-Type":"application/json"
+                },
+                withCredentials:true
+              })
+              console.log(data)
                     // alert(JSON.stringify(values, null, 2));
-                    ref.current.complete()
-
+              // toast.success(data.message)
             },
           });
   return (
     <div className=" w-100 h-75 d-flex justify-content-center align-items-center">
         <LoadingBar color='red' ref={ref} />
       <form className="w-50" onSubmit={(e)=>{
+        toast.success("Hurray")
         e.preventDefault()
         handleSubmit()
       }}> 

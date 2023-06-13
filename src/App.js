@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import Todo from "./pages/Todo";
+import { Toaster } from "react-hot-toast";
 import './App.css'
 const App = () => {
-  const [isloggedin, setIsLoggedIn] = useState(true);
-  return <div className="w-100 vh-100">{isloggedin ? <Todo /> : <Home />}</div>;
+  const [isloggedin, setIsLoggedIn] = useState(false);
+  return <div className="w-100 vh-100">
+  <Toaster/>
+  {isloggedin ? <Todo /> : <Home />}</div>;
 };
 
 export default App;
