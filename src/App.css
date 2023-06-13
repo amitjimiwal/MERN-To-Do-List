@@ -4,4 +4,8 @@
       box-sizing: border-box;
       scroll-behavior: smooth;
   }
-  
+
+
+.navbar-custom {
+    background-color: rgb(141, 216, 241); /* Dark blue color */
+  }

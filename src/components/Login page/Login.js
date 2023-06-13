@@ -11,7 +11,7 @@ const Login = ({toggle}) => {
             },
             onSubmit:async (values) => {
                   ref.current.continuousStart();
-                    alert(JSON.stringify(values, null, 2));
+                    // alert(JSON.stringify(values, null, 2));
                     ref.current.complete()
 
             },
@@ -19,7 +19,10 @@ const Login = ({toggle}) => {
   return (
     <div className=" w-100 h-75 d-flex justify-content-center align-items-center">
         <LoadingBar color='red' ref={ref} />
-      <form className="w-50" onSubmit={handleSubmit}> 
+      <form className="w-50" onSubmit={(e)=>{
+        e.preventDefault()
+        handleSubmit()
+      }}> 
         <div class="form-outline mb-4">
         <label class="form-label" for="form2Example1">
             Email address
