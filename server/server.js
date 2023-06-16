@@ -8,14 +8,14 @@ dotenv.config({ path: "./config.env" });
 const cookieParser = require('cookie-parser');
 const router = require('./routes/approutes');
 connectdatabase();
-
+app.use(cookieParser())
 app.use(cors({
       credentials:true,
       origin:"http://localhost:3000",
       methods:["GET","POST","PUT","DELETE"]
 }))
 app.use(express.json())
-app.use(cookieParser())
+
 app.use(bodyParser.urlencoded({extended:false}))
 app.use("/api/v1",router)
 app.listen(process.env.PORT,()=>{
