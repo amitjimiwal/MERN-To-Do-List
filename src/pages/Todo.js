@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import TodoList from "../components/TodoList";
 import TotalCompleteItems from "../components/TotalCompleteItems";
 const Todo = () => {
-      
   return (
     <div>
     <Navbar/>

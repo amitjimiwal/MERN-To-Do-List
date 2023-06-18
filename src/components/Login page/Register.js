@@ -1,8 +1,13 @@
 import { useRef } from 'react';
 import { useFormik } from 'formik';
 import LoadingBar from 'react-top-loading-bar'
+import { toast } from 'react-hot-toast';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../store/todoSlice';
+import auth from '../../api/auth';
 const Register = ({toggle}) => {
-      const ref = useRef(null)
+  const dispatch=useDispatch()
+  const ref = useRef(null)
 const {values,handleChange,handleSubmit} = useFormik({
             initialValues: {
               name:'',
@@ -11,9 +16,21 @@ const {values,handleChange,handleSubmit} = useFormik({
             },
             onSubmit:async(values)  => {
                  ref.current.continuousStart();
-            //   alert(JSON.stringify(values, null, 2));
-              ref.current.complete()
-            },
+                 ref.current.complete()
+                 try {
+                  const output = await auth("register", values);
+                  if (output.success) {
+                    toast.success(output.message);
+                    dispatch(setUser({
+                      isloggedin:true
+                    }))
+                  } else {
+                    toast.error(output.message);
+                  }
+                } catch (error) {
+                  toast.error(error.message);
+                }
+            }
           });
   return (
       <div className=" w-100 h-75 d-flex justify-content-center align-items-center">

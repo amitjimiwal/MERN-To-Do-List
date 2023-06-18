@@ -2,11 +2,11 @@
 import {configureStore} from '@reduxjs/toolkit';
 import todoreducer from './todoSlice'
 // Creating and exporting the store.
-export const store= configureStore({
+const store= configureStore({
       reducer:{
             todolist:todoreducer,
       }
 })
-
+export default store;
 
 
