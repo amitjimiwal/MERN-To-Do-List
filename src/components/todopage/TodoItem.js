@@ -4,7 +4,7 @@ import { completeItem, deleteItem } from '../../store/todoSlice';
 
 const TodoItem = ({ id, title, completed }) => {
 	const handleComplete=(compid)=>{
-
+		    
 	}
       const deleteWork=(delid)=>{
 
