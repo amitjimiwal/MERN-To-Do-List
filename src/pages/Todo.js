@@ -1,5 +1,8 @@
-import { toast } from "react-hot-toast";
-import { AddTodoForm, TodoList } from "../components/todopage/index";
+import {
+  AddTodoForm,
+  TodoList,
+  TotalCompleteItems,
+} from "../components/todopage/index";
 import Navbar from "../components/todopage/Navbar";
 import { useEffect, useState, createContext } from "react";
 export const TodoContext = createContext();
@@ -18,7 +21,8 @@ const Todo = () => {
         settodoItems(data.tasks);
       }
     } catch (error) {
-      toast.error(error.response.data.message);
+      // toast.error(error.response.data.message);
+      console.log(error);
     }
   };
   useEffect(() => {
@@ -28,9 +32,10 @@ const Todo = () => {
     <div>
       <Navbar />
       <div className="container bg-white p-4 mt-5">
-        <TodoContext.Provider value={{ getMyTask }}>
+        <TodoContext.Provider value={{ getMyTask, todoItems }}>
           <AddTodoForm />
           <TodoList todolist={todoItems} />
+          <TotalCompleteItems />
         </TodoContext.Provider>
       </div>
     </div>

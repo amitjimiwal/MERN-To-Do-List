@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import Todo from "./pages/Todo";
@@ -9,7 +9,6 @@ import { useEffect } from "react";
 import axios from "axios";
 import { setUser } from "./store/todoSlice";
 import { useDispatch } from "react-redux";
-import getuserInfo from "./api/getuserinfo";
 const App = () => {
   const dispatch=useDispatch();
   const {isloggedin}=useSelector((state)=> state.todolist);

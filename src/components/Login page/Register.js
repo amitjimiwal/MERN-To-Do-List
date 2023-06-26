@@ -36,29 +36,29 @@ const {values,handleChange,handleSubmit} = useFormik({
       <div className=" w-100 h-75 d-flex justify-content-center align-items-center">
             <LoadingBar color='red' ref={ref} />
       <form className="w-50" onSubmit={handleSubmit}>
-      <div class="form-outline mb-4">
-        <label class="form-label" for="form2Example3">
+      <div className="form-outline mb-4">
+        <label className="form-label" htmlFor="form2Example3">
             Name
           </label>
-          <input type="text" id="form2Example3" class="form-control" placeholder="Enter your Name" required onChange={handleChange} name="name" value={values.name}/>
+          <input type="text" id="form2Example3" className="form-control" placeholder="Enter your Name" required onChange={handleChange} name="name" value={values.name}/>
         </div>
-        <div class="form-outline mb-4">
-        <label class="form-label" for="form2Example1">
+        <div className="form-outline mb-4">
+        <label className="form-label" htmlFor="form2Example1">
             Email address
           </label>
-          <input type="email" id="form2Example1" class="form-control" placeholder="Enter your Email" required  onChange={handleChange} name="email" value={values.email}/>
+          <input type="email" id="form2Example1" className="form-control" placeholder="Enter your Email" required  onChange={handleChange} name="email" value={values.email}/>
         </div>
-        <div class="form-outline mb-4">
-        <label class="form-label" for="form2Example2">
+        <div className="form-outline mb-4">
+        <label className="form-label" htmlFor="form2Example2">
             Password
        </label>
-          <input type="password" id="form2Example2" class="form-control" placeholder="Enter your password" required onChange={handleChange} name="password" value={values.password}/>
+          <input type="password" id="form2Example2" className="form-control" placeholder="Enter your password" required onChange={handleChange} name="password" value={values.password}/>
         </div>
-        <button type="submit" class="btn btn-primary btn-block mb-4">
+        <button type="submit" className="btn btn-primary btn-block mb-4">
           Register
         </button>
 
-        <div class="text-center">
+        <div className="text-center">
           <p>
             Already a user ? <span onClick={toggle} className="text-primary text-decoration-underline pe-auto" role="button">Login</span>
           </p>

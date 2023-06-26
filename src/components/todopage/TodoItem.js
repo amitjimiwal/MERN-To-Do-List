@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
-import { useDispatch } from "react-redux";
-import { completeItem, deleteItem } from "../../store/todoSlice";
 import { toast } from "react-hot-toast";
 import { TodoContext } from "../../pages/Todo";
 const TodoItem = ({ id, title, completed }) => {
   const { getMyTask } = useContext(TodoContext);
   const handleUpdateDelete = async (event) => {
+	// handling update and delete both in a single function
 	const elementType=event.target.tagName;
 	const methodForAPI=elementType === "BUTTON" ? "DELETE" : "PUT";
       try {

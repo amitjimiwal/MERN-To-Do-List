@@ -2,7 +2,6 @@ import { useRef } from "react";
 import { useFormik } from "formik";
 import LoadingBar from "react-top-loading-bar";
 import { toast } from "react-hot-toast";
-import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../store/todoSlice";
 import auth from "../../api/auth";
@@ -43,14 +42,14 @@ const Login = ({ toggle }) => {
           handleSubmit();
         }}
       >
-        <div class="form-outline mb-4">
-          <label class="form-label" for="form2Example1">
+        <div className="form-outline mb-4">
+          <label className="form-label" htmlFor="form2Example1">
             Email address
           </label>
           <input
             type="email"
             id="form2Example1"
-            class="form-control"
+            className="form-control"
             placeholder="Enter your Email"
             required
             onChange={handleChange}
@@ -58,14 +57,14 @@ const Login = ({ toggle }) => {
             value={values.email}
           />
         </div>
-        <div class="form-outline mb-4">
-          <label class="form-label" for="form2Example2">
+        <div className="form-outline mb-4">
+          <label className="form-label" htmlFor="form2Example2">
             Password
           </label>
           <input
             type="password"
             id="form2Example2"
-            class="form-control"
+            className="form-control"
             placeholder="Enter your password"
             required
             onChange={handleChange}
@@ -73,11 +72,11 @@ const Login = ({ toggle }) => {
             value={values.password}
           />
         </div>
-        <button type="submit" class="btn btn-primary btn-block mb-4">
+        <button type="submit" className="btn btn-primary btn-block mb-4">
           Sign in
         </button>
 
-        <div class="text-center">
+        <div className="text-center">
           <p>
             Not a member?{" "}
             <span
