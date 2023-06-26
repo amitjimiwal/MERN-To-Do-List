@@ -1,7 +1,5 @@
-import AddTodoForm from "../components/AddTodoForm";
-import Navbar from "../components/Navbar";
-import TodoList from "../components/TodoList";
-import TotalCompleteItems from "../components/TotalCompleteItems";
+import {AddTodoForm,TodoList,TodoItem,TotalCompleteItems} from '../components/todopage/index'
+import Navbar from '../components/Navbar';
 const Todo = () => {
   return (
     <div>

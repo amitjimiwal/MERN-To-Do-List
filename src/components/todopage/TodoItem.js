@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { completeItem, deleteItem } from '../store/todoSlice';
+import { completeItem, deleteItem } from '../../store/todoSlice';
 
 const TodoItem = ({ id, title, completed }) => {
 	const handleComplete=(compid)=>{
