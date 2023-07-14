@@ -1,5 +1,5 @@
 # TodoWeb
-To do list using MERN Stack , redux toolkit for state management
+To do list using MERN Stack with features like user auth and profile update, redux toolkit for state management
 
 ## Get Started
 Follow the steps below to get started with the repository:
